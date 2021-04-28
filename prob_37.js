@@ -29,7 +29,17 @@ async function main(){
         list[i].push(num);
     }
 
-    console.log(list);
+    let num = Number(await input("Nota a buscar: "));
+    let found = false;
+    for(let i=0;i<10;i++){
+        if(list[i][1]==num){
+            found = true;
+        }
+    }
+    if(found)
+        console.log("si esta " + grade);
+    else
+        console.log("no esta " + grade);
     process.exit();
 }
 
